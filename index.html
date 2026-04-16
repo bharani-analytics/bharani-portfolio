@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharani K | Data Analyst</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: #020617;
+}
+
+nav h1 {
+    color: #38bdf8;
+}
+
+nav a {
+    color: #e2e8f0;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #38bdf8;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* SECTION */
+section {
+    padding: 60px 80px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+/* PROJECT CARDS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* SKILLS */
+.skills span {
+    display: inline-block;
+    background: #38bdf8;
+    color: black;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Bharani</h1>
+    <div>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Hi, I'm Bharani 👋</h1>
+    <p>Aspiring Data Analyst | Power BI | SQL | Excel</p>
+</div>
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        MBA (HR) student with hands-on experience in HR & Operations Analytics.
+        Skilled in building Power BI dashboards and transforming raw data into actionable insights 
+        to support business decision-making.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+
+        <div class="card">
+            <img src="dashboard1.png" alt="HR Dashboard">
+            <h3>HR Analytics Dashboard</h3>
+            <p>Built dashboards for travel expenses, telecom billing, transportation utilization, and employee satisfaction.</p>
+            <p><strong>Tools:</strong> Power BI, Excel</p>
+        </div>
+
+        <div class="card">
+            <img src="dashboard2.png" alt="Customer Dashboard">
+            <h3>Customer Behavior Analysis</h3>
+            <p>Analyzed customer trends and revenue patterns using Python, SQL, and Power BI.</p>
+            <p><strong>Tools:</strong> Python, SQL, Power BI</p>
+            <a href="https://github.com/bharani-analytics/Customer_behavior_analysis" target="_blank">View Project</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>SQL</span>
+        <span>Python (Basic)</span>
+        <span>Power BI</span>
+        <span>Excel</span>
+        <span>Data Analysis</span>
+        <span>Data Visualization</span>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: bharanikaruppusamy25@gmail.com</p>
+    <p>
+        LinkedIn: 
+        <a href="https://www.linkedin.com/in/bharani-k29052004" target="_blank">
+            View Profile
+        </a>
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Bharani K</p>
+</footer>
+
+</body>
+</html>

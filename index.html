@@ -15,9 +15,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* BODY */
 body {
-    background: #0f172a;
-    color: #e2e8f0;
+    background: black;
+    color: #d4af37;
 }
 
 /* NAVBAR */
@@ -25,58 +26,84 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 20px 60px;
-    background: #020617;
+    background: black;
+    border-bottom: 1px solid #d4af37;
 }
 
 nav h1 {
-    color: #38bdf8;
+    color: #d4af37;
 }
 
 nav a {
-    color: #e2e8f0;
+    color: #d4af37;
     margin-left: 20px;
     text-decoration: none;
 }
 
-/* HERO */
-.hero {
+nav a:hover {
+    color: white;
+}
+
+/* HOME */
+.home {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 80px 20px;
 }
 
-.hero h1 {
+.home h1 {
     font-size: 42px;
-    color: #38bdf8;
+    margin-bottom: 15px;
 }
 
-.hero p {
-    margin-top: 10px;
-    font-size: 18px;
+/* TYPING TEXT */
+.typing {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
 }
 
-/* BUTTON */
+/* SUMMARY */
+.summary {
+    max-width: 600px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
 .btn {
-    display: inline-block;
-    margin-top: 20px;
-    background: #38bdf8;
+    background: #d4af37;
     color: black;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-/* SECTION */
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+/* SECTIONS */
 section {
     padding: 60px 80px;
 }
 
 h2 {
     margin-bottom: 20px;
-    color: #38bdf8;
 }
 
-/* PROJECT CARDS */
+/* PROJECTS */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -84,10 +111,11 @@ h2 {
 }
 
 .card {
-    background: #1e293b;
+    background: #111;
     padding: 20px;
     border-radius: 12px;
     transition: 0.3s;
+    border: 1px solid #d4af37;
 }
 
 .card:hover {
@@ -103,7 +131,7 @@ h2 {
 /* SKILLS */
 .skills span {
     display: inline-block;
-    background: #38bdf8;
+    background: #d4af37;
     color: black;
     padding: 8px 12px;
     margin: 5px;
@@ -114,129 +142,121 @@ h2 {
 footer {
     text-align: center;
     padding: 20px;
-    background: #020617;
+    border-top: 1px solid #d4af37;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
     <h1>Bharani</h1>
     <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="resume.pdf" target="_blank">Resume</a>
         <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
 
-<div class="hero">
-    <h1>Hi, I'm Bharani 👋</h1>
-    <p>Aspiring Data Analyst | Turning Data into Actionable Insights</p>
-    <a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
-</div>
+<!-- HOME -->
+<section id="home" class="home">
+    <h1>Hello, My Name is Bharani</h1>
 
-<section>
+    <div class="typing" id="typing"></div>
+
+    <p class="summary">
+        Aspiring Data Analyst with hands-on experience in HR & Operations Analytics.
+        Skilled in transforming raw data into meaningful insights to support business decisions.
+    </p>
+
+    <div class="buttons">
+        <a href="resume.pdf" target="_blank" class="btn">Download CV</a>
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="https://www.linkedin.com/in/bharani-k29052004" target="_blank" class="btn">LinkedIn</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
     <h2>About Me</h2>
     <p>
-        MBA (HR) student with hands-on experience in HR & Operations Analytics.
-        Skilled in building Power BI dashboards and transforming raw data into actionable insights 
-        to support business decision-making.
+        MBA (HR) student with experience in HR & Operations Analytics.
+        I specialize in Power BI, SQL, and Excel to analyze data and generate insights.
     </p>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
     <h2>Projects</h2>
-    <div class="projects">
 
+    <div class="projects">
         <div class="card">
-            <img src="dashboard1.png" alt="HR Operations Dashboard">
-            <h3>HR Operations Analytics Dashboard</h3>
-            <p>
-                Analyzed employee and operational data to identify cost trends, usage patterns, and satisfaction insights.
-            </p>
-            <p><strong>Key Insights:</strong></p>
-            <ul>
-                <li>Identified high travel expenses across departments</li>
-                <li>Improved visibility of employee satisfaction trends</li>
-            </ul>
-            <p><strong>Tools:</strong> Power BI, Excel</p>
+            <img src="dashboard1.png">
+            <h3>HR Operations Dashboard</h3>
+            <p>Analyzed employee data to identify trends and improve decision-making.</p>
         </div>
 
         <div class="card">
-            <img src="dashboard2.png" alt="Customer Dashboard">
+            <img src="dashboard2.png">
             <h3>Customer Behavior Analysis</h3>
-            <p>
-                Identified customer purchasing patterns, revenue trends, and product performance using SQL and Power BI.
-            </p>
-            <p><strong>Key Insights:</strong></p>
-            <ul>
-                <li>Detected top-performing product categories</li>
-                <li>Analyzed customer buying behavior trends</li>
-            </ul>
-            <p><strong>Tools:</strong> Python, SQL, Power BI</p>
-            <a href="https://github.com/bharani-analytics/Customer_behavior_analysis" target="_blank">View Project</a>
+            <p>Used SQL & Power BI to analyze purchasing trends and customer insights.</p>
         </div>
-
-    </div>
-</section>
-    <section id="dashboards">
-    <h2>Dashboard Snapshots</h2>
-    <div class="projects">
-
-        <div class="card">
-            <img src="Screenshot (259).png">
-            <h3>Travel Expense Dashboard</h3>
-            <p>Analyzed travel spending trends across departments to identify cost optimization opportunities.</p>
-        </div>
-
-        <div class="card">
-            <img src="Screenshot (260).png">
-            <h3>Transportation Analysis</h3>
-            <p>Visualized employee transport usage and identified preferences for better planning.</p>
-        </div>
-
-        <div class="card">
-            <img src="Screenshot (262).png">
-            <h3>Employee Satisfaction</h3>
-            <p>Analyzed employee feedback data to measure satisfaction and identify improvement areas.</p>
-        </div>
-
-        <div class="card">
-            <img src="Screenshot (263).png">
-            <h3>CUG Expenses Dashboard</h3>
-            <p>Tracked CUG usage and billing trends across departments.</p>
-        </div>
-
     </div>
 </section>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>SQL</span>
-        <span>Python (Basic)</span>
-        <span>Power BI</span>
-        <span>Excel</span>
-        <span>Data Analysis</span>
-        <span>Data Visualization</span>
-    </div>
-</section>
-
+<!-- CONTACT -->
 <section id="contact">
     <h2>Contact</h2>
     <p>Email: bharanikaruppusamy25@gmail.com</p>
     <p>
-        LinkedIn: 
-        <a href="https://www.linkedin.com/in/bharani-k29052004" target="_blank">
-            View Profile
-        </a>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/bharani-k29052004" target="_blank">View Profile</a>
     </p>
 </section>
 
 <footer>
     <p>© 2026 Bharani K</p>
 </footer>
+
+<!-- TYPING SCRIPT -->
+<script>
+const texts = [
+    "MBA Candidate",
+    "Data Analyst",
+    "Power BI Developer",
+    "SQL & Excel Specialist",
+    "Turning Data into Insights"
+];
+
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+
+(function type() {
+    if (count === texts.length) {
+        count = 0;
+    }
+
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    document.getElementById('typing').textContent = letter;
+
+    if (letter.length === currentText.length) {
+        setTimeout(() => {
+            index = 0;
+            count++;
+            setTimeout(type, 500);
+        }, 1500);
+    } else {
+        setTimeout(type, 100);
+    }
+})();
+</script>
 
 </body>
 </html>

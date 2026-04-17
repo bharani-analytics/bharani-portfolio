@@ -3,61 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bharani K | Data Analyst</title>
+<title>Bharani | Data Analyst</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-body{
-    background:#000;
-    color:#d4af37;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
-/* NAV */
+body{
+    background:#0a0a0a;
+    color:white;
+}
+
+/* NAVBAR */
 nav{
     display:flex;
     justify-content:space-between;
-    padding:20px 60px;
+    padding:20px 80px;
+    position:fixed;
+    width:100%;
+    background:#0a0a0a;
+    z-index:1000;
 }
 
 nav a{
-    color:#d4af37;
-    margin-left:20px;
+    color:white;
+    margin-left:25px;
     text-decoration:none;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#00f7ff;
 }
 
 /* HERO */
 .home{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
     height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
     padding:0 80px;
 }
 
-.home h1{font-size:48px;}
-.typing{color:white;margin:10px 0;}
-
-.btn{
-    background:#d4af37;
-    color:black;
-    padding:10px 18px;
-    border-radius:25px;
-    margin-right:10px;
-    text-decoration:none;
+/* LEFT */
+.home-content{
+    max-width:600px;
 }
 
-/* SECTION */
-section{padding:60px 80px;}
-h2{margin-bottom:20px;}
+.home-content h1{
+    font-size:48px;
+}
+
+.home-content h1 span{
+    color:#00f7ff;
+}
+
+.typing{
+    margin:15px 0;
+    font-size:22px;
+    color:#00f7ff;
+}
+
+.summary{
+    margin:20px 0;
+    line-height:1.6;
+}
+
+/* BUTTONS */
+.btn{
+    display:inline-block;
+    padding:10px 20px;
+    border:2px solid #00f7ff;
+    color:#00f7ff;
+    margin-right:10px;
+    border-radius:25px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#00f7ff;
+    color:black;
+}
+
+/* IMAGE */
+.home-img img{
+    width:300px;
+    border-radius:50%;
+    border:3px solid #00f7ff;
+}
+
+/* SECTIONS */
+section{
+    padding:80px;
+}
+
+h2{
+    margin-bottom:20px;
+    color:#00f7ff;
+}
 
 /* SKILLS */
 .skills span{
     display:inline-block;
-    background:#d4af37;
-    color:black;
+    border:1px solid #00f7ff;
     padding:8px 12px;
     margin:5px;
     border-radius:20px;
@@ -74,18 +130,24 @@ h2{margin-bottom:20px;}
     background:#111;
     padding:20px;
     border-radius:12px;
-    border:1px solid #d4af37;
     transition:0.3s;
 }
 
 .card:hover{
     transform:translateY(-10px);
-    box-shadow:0 0 20px #d4af37;
 }
 
 .card img{
     width:100%;
     border-radius:8px;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
 }
 </style>
 </head>
@@ -99,28 +161,33 @@ h2{margin-bottom:20px;}
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
-<a href="#dashboards">Dashboards</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
 <!-- HOME -->
 <section id="home" class="home">
-<div>
-<h1>Bharani K</h1>
+
+<div class="home-content">
+<h1>Hello, I'm <span>Bharani</span></h1>
+
 <div class="typing" id="typing"></div>
 
-<p>
+<p class="summary">
 MBA Candidate & Data Analyst with experience in HR & Operations Analytics.
 Built Power BI dashboards and analyzed 500+ datasets to generate insights.
 </p>
 
-<a href="resume.pdf" class="btn">Download Resume</a>
+<a href="resume.pdf" class="btn">Download CV</a>
 <a href="#projects" class="btn">View Projects</a>
 <a href="https://www.linkedin.com/in/bharani-k29052004" class="btn">LinkedIn</a>
 </div>
+
+<div class="home-img">
+<img src="profile.png">
+</div>
+
 </section>
 
 <!-- ABOUT -->
@@ -128,39 +195,22 @@ Built Power BI dashboards and analyzed 500+ datasets to generate insights.
 <h2>About Me</h2>
 <p>
 MBA student specializing in Data Analytics with hands-on experience in HR & Operations Analytics.
-Skilled in transforming raw data into meaningful insights for business decision-making.
+Skilled in Power BI, SQL, and Excel to turn raw data into business insights.
 </p>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
-
 <div class="skills">
 <span>SQL</span>
 <span>Python</span>
 <span>Power BI</span>
 <span>Excel</span>
-<span>Pandas</span>
+<span>Data Analysis</span>
 <span>EDA</span>
-<span>Data Visualization</span>
 <span>HR Analytics</span>
 </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-<h2>Experience</h2>
-
-<h3>HR Analyst Intern – Propel Industries</h3>
-<p>Aug 2025 – Jan 2026</p>
-
-<ul>
-<li>Developed dashboards for travel, telecom, transport & satisfaction</li>
-<li>Analyzed operational data to identify cost trends</li>
-<li>Processed 500+ employee survey responses</li>
-<li>Delivered insights for HR decision-making</li>
-</ul>
 </section>
 
 <!-- PROJECTS -->
@@ -170,33 +220,29 @@ Skilled in transforming raw data into meaningful insights for business decision-
 <div class="projects">
 
 <div class="card">
-<h3>HR Analytics Dashboard Suite</h3>
-<p>Built multiple dashboards for HR insights and cost tracking.</p>
-<p><b>Tools:</b> Power BI, Excel</p>
+<img src="dashboard1.png">
+<h3>HR Analytics Dashboard</h3>
+<p>Analyzed employee data and operational insights.</p>
 </div>
 
 <div class="card">
-<h3>Customer Shopping Behavior Analysis</h3>
-<p>End-to-end data analysis using SQL, Python & Power BI.</p>
+<img src="dashboard2.png">
+<h3>Customer Behavior Analysis</h3>
+<p>End-to-end data analysis using SQL & Power BI.</p>
 <a href="https://github.com/bharani-analytics/Customer_behavior_analysis" class="btn">GitHub</a>
 </div>
 
+<div class="card">
+<img src="dashboard3.png">
+<h3>Transportation Survey Dashboard</h3>
+<p>Analyzed employee transportation patterns.</p>
 </div>
-</section>
 
-<!-- DASHBOARDS -->
-<section id="dashboards">
-<h2>Dashboard Gallery</h2>
-
-<div class="projects">
-
-<div class="card"><img src="dashboard1.png"><p>Travel Expenses</p></div>
-<div class="card"><img src="dashboard2.png"><p>Transport Survey</p></div>
-<div class="card"><img src="dashboard3.png"><p>Employee Satisfaction</p></div>
-<div class="card"><img src="dashboard4.png"><p>CUG Dashboard</p></div>
-<div class="card"><img src="dashboard5.png"><p>HR Insights</p></div>
-<div class="card"><img src="dashboard6.png"><p>Expense Analysis</p></div>
-<div class="card"><img src="dashboard7.png"><p>Operations Dashboard</p></div>
+<div class="card">
+<img src="dashboard4.png">
+<h3>Travel Expense Dashboard</h3>
+<p>Identified cost trends and spending patterns.</p>
+</div>
 
 </div>
 </section>
@@ -210,16 +256,24 @@ Skilled in transforming raw data into meaningful insights for business decision-
 </p>
 </section>
 
+<footer>
+<p>© 2026 Bharani K</p>
+</footer>
+
+<!-- TYPING -->
 <script>
-const texts=["MBA Candidate","Data Analyst","Power BI Developer"];
+const texts=["MBA Candidate","Data Analyst","Power BI Developer","SQL & Excel"];
 let i=0,j=0;
 
 (function type(){
 let current=texts[i];
 document.getElementById("typing").textContent=current.slice(0,++j);
+
 if(j===current.length){
-    setTimeout(()=>{j=0;i=(i+1)%texts.length;type();},1500);
-}else{setTimeout(type,100);}
+setTimeout(()=>{j=0;i=(i+1)%texts.length;type();},1500);
+}else{
+setTimeout(type,100);
+}
 })();
 </script>
 

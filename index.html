@@ -57,6 +57,60 @@ nav a:hover{color:#fff}
   background:#d4af37;
   border-radius:10px;
 }
+
+  .about-container{
+  display:grid;
+  grid-template-columns:1fr 1.5fr;
+  gap:40px;
+  margin-top:40px;
+}
+
+.left-side{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.about-img{
+  width:100%;
+  max-width:220px;
+  border-radius:12px;
+  border:2px solid #d4af37;
+}
+
+.profile-card{
+  background:#12121a;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid #1f1f2e;
+}
+
+.skill-head{
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+}
+
+.bar{
+  width:100%;
+  height:8px;
+  background:#222;
+  border-radius:10px;
+  margin-top:5px;
+}
+
+.bar div{
+  height:8px;
+  background:#d4af37;
+  border-radius:10px;
+}
+
+/* responsive */
+@media(max-width:900px){
+  .about-container{
+    grid-template-columns:1fr;
+  }
+}
 /* SECTION */
 section{
   padding:90px 60px;
@@ -322,7 +376,6 @@ footer{
   </div>
 
 </section>
-
 <!-- ABOUT -->
 <section id="about" class="about">
 
@@ -330,74 +383,67 @@ footer{
 
 <div class="about-container">
 
-  <!-- LEFT PROFILE CARD -->
-  <img src="PHOTO.jpeg">
-  <div class="profile-card">
-    <p><strong>Name:</strong> Bharani K</p>
-    <p><strong>Role:</strong> Data Analyst | Business Analyst</p>
-    <p><strong>Experience:</strong> 6 Months – HR & Analytics Internship</p>
-    <p><strong>Location:</strong> Tamil Nadu, India</p>
+  <!-- LEFT SIDE -->
+  <div class="left-side">
 
-    <h3>Core Skills</h3>
+    <img src="photo.jpg" class="about-img">
 
-    <div class="skill-bar">
-  <div class="skill-head">
-    <span>Power BI</span>
-    <span>90%</span>
+    <div class="profile-card">
+      <p><strong>Name:</strong> Bharani K</p>
+      <p><strong>Role:</strong> Data Analyst | Business Analyst</p>
+      <p><strong>Experience:</strong> 6 Months – HR & Analytics Internship</p>
+      <p><strong>Location:</strong> Tamil Nadu, India</p>
+
+      <h3>Core Skills</h3>
+
+      <div class="skill-bar">
+        <div class="skill-head"><span>Power BI</span><span>90%</span></div>
+        <div class="bar"><div style="width:90%"></div></div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="skill-head"><span>Excel (Advanced)</span><span>85%</span></div>
+        <div class="bar"><div style="width:85%"></div></div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="skill-head"><span>Data Visualization</span><span>85%</span></div>
+        <div class="bar"><div style="width:85%"></div></div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="skill-head"><span>Python (Basics)</span><span>65%</span></div>
+        <div class="bar"><div style="width:65%"></div></div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="skill-head"><span>Business Analytics</span><span>85%</span></div>
+        <div class="bar"><div style="width:85%"></div></div>
+      </div>
+
+    </div>
+
   </div>
-  <div class="bar"><div style="width:90%"></div></div>
-</div>
 
-<div class="skill-bar">
-  <div class="skill-head">
-    <span>Excel (Advanced)</span>
-    <span>85%</span>
-  </div>
-  <div class="bar"><div style="width:85%"></div></div>
-</div>
-
-<div class="skill-bar">
-  <div class="skill-head">
-    <span>Data Visualization</span>
-    <span>85%</span>
-  </div>
-  <div class="bar"><div style="width:85%"></div></div>
-</div>
-
-<div class="skill-bar">
-  <div class="skill-head">
-    <span>Python (Basics)</span>
-    <span>65%</span>
-  </div>
-  <div class="bar"><div style="width:65%"></div></div>
-</div>
-
-<div class="skill-bar">
-  <div class="skill-head">
-    <span>Business Analytics</span>
-    <span>85%</span>
-  </div>
-  <div class="bar"><div style="width:85%"></div></div>
-</div>
-
-  <!-- RIGHT CONTENT -->
+  <!-- RIGHT SIDE -->
   <div class="about-content">
 
     <h3>About</h3>
+
     <p>
-    MBA graduate specializing in Business Analytics with hands-on experience in HR and operational analytics. During my internship, I developed 5+ Power BI dashboards and analyzed 500+ datasets across performance management, hiring analytics, manpower planning, and financial monitoring.
+    MBA graduate specializing in Business Analytics with hands-on experience in HR and operational analytics. During my internship, I developed interactive Power BI dashboards for performance management, hiring analytics, manpower planning, and financial monitoring.
     </p>
 
     <p>
-    Skilled in Power BI, Advanced Excel, SQL, and Python, I specialize in dashboard design, KPI tracking, data cleaning, and MIS automation.
+    My core expertise includes Power BI, Advanced Excel, SQL, and basic Python. I specialize in dashboard design, KPI tracking, data cleaning, and MIS automation.
     </p>
 
     <p><strong>Profile:</strong> Business Analyst | Data Analyst</p>
-    <p><strong>Domain:</strong> HR Analytics</p>
+    <p><strong>Domain:</strong> HR Analytics, Retail, Ecommerce</p>
     <p><strong>Education:</strong> MBA – Business Analytics</p>
-    <p><strong>Languages:</strong> English, Tamil</p>
+    <p><strong>Language:</strong> English, Tamil</p>
     <p><strong>BI Tools:</strong> Microsoft Power BI</p>
-    <p><strong>Other Skills:</strong> Excel VBA, SQL, SPSS, PowerPoint</p>
+    <p><strong>Other Skills:</strong> Excel VBA & Macros, SQL, SPSS, PowerPoint</p>
     <p><strong>Interest:</strong> Data-Driven Strategy & Business Optimization</p>
 
     <h2 style="color:#d4af37;">5+ Projects Completed</h2>
@@ -406,15 +452,6 @@ footer{
 
 </div>
 
-</section>
-<!-- SKILLS -->
-<section id="skills">
-  <h2>Skills</h2>
-  <span>Power BI</span>
-  <span>Excel</span>
-  <span>SQL</span>
-  <span>Data Visualization</span>
-  <span>Python|Pandas </span>
 </section>
 
   <section id="projects">

@@ -65,15 +65,9 @@ section{
   color:#d4af37;
 }
 
-.hero-sub{
-  font-size:1.5rem;
-  color:#9aa0a6;
-}
-
 .typing{
   font-size:1.6rem;
   color:#d4af37;
-  height:30px;
 }
 
 .cursor{
@@ -81,52 +75,23 @@ section{
 }
 
 @keyframes blink{
-  50%{opacity:0}
+  0%,50%,100%{opacity:1}
+  25%,75%{opacity:0}
 }
 
-/* BUTTONS */
-.cta{
-  display:flex;
-  gap:15px;
-  margin-top:20px;
-}
-
+/* BUTTON */
 .btn{
-  padding:12px 20px;
-  background:linear-gradient(var(--gold),var(--gold-2));
+  padding:10px 18px;
+  background:#d4af37;
   color:black;
-  border-radius:8px;
+  border-radius:6px;
   text-decoration:none;
-  font-weight:600;
+  margin:5px;
 }
-
 .btn.outline{
   background:none;
   color:white;
-  border:1px solid var(--border);
-}
-
-/* ABOUT */
-.about-container{
-  display:grid;
-  grid-template-columns:1fr 1.5fr;
-  gap:40px;
-  margin-top:40px;
-  text-align:left;
-}
-
-.about-img{
-  width:100%;
-  max-width:220px;
-  border-radius:12px;
-  border:2px solid #d4af37;
-}
-
-.profile-card{
-  background:#12121a;
-  padding:20px;
-  border-radius:12px;
-  border:1px solid #1f1f2e;
+  border:1px solid #333;
 }
 
 /* PROJECTS */
@@ -143,18 +108,58 @@ section{
   border:1px solid var(--border);
 }
 
-.project img{
-  width:100%;
-  border-radius:10px;
-}
-
-/* CONTACT */
 footer{
   text-align:center;
   padding:20px;
   border-top:1px solid #1a1a24;
 }
 </style>
+
+<!-- ✅ SCRIPT FIXED -->
+<script>
+const roles = [
+  "Data Analyst",
+  "Business Analyst",
+  "Power BI Developer"
+];
+
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
+
+function typeEffect() {
+  const element = document.getElementById("roles");
+
+  if (!element) return;
+
+  if (!isDeleting && j <= roles[i].length) {
+    current = roles[i].substring(0, j++);
+    element.innerHTML = current;
+  }
+
+  if (isDeleting && j >= 0) {
+    current = roles[i].substring(0, j--);
+    element.innerHTML = current;
+  }
+
+  if (j === roles[i].length) {
+    isDeleting = true;
+    setTimeout(typeEffect, 1200);
+    return;
+  }
+
+  if (j === 0 && isDeleting) {
+    isDeleting = false;
+    i = (i + 1) % roles.length;
+  }
+
+  setTimeout(typeEffect, isDeleting ? 50 : 100);
+}
+
+window.onload = typeEffect;
+</script>
+
 </head>
 
 <body>
@@ -171,7 +176,7 @@ footer{
 
 <!-- HOME -->
 <section id="home" class="home">
-  <h2 class="hero-sub">Hello, I'm</h2>
+  <h2>Hello, I'm</h2>
   <h1 class="hero-name">Bharani</h1>
 
   <h3 class="typing">
@@ -179,29 +184,32 @@ footer{
   </h3>
 
   <p>
-    Analyzed 500+ employee and operational datasets and developed 5+ Power BI dashboards to drive data-driven business decisions.
+  Analyzed 500+ employee datasets and built dashboards for business decisions.
   </p>
 
-  <div class="cta">
-    <a href="#projects" class="btn">View Projects</a>
+  <div>
+    <a href="#projects" class="btn">Projects</a>
     <a href="https://www.linkedin.com/in/bharanik25/" class="btn outline">LinkedIn</a>
-    <a href="Bharani_Resume_.pdf" class="btn outline">Resume</a>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-<h2>About Me</h2>
+<h2>About</h2>
+<p>MBA Business Analytics student with dashboard experience.</p>
+</section>
 
-<div class="about-container">
-  <div>
-    <img src="PHOTO.jpeg" class="about-img">
-  </div>
+<!-- PROJECT -->
+<section id="projects">
+<h2>Projects</h2>
 
-  <div>
-    <p>MBA graduate specializing in Business Analytics...</p>
+<div class="projects">
+  <div class="project">
+    <h3>Dashboard Project</h3>
+    <p>Power BI dashboard work</p>
   </div>
 </div>
+
 </section>
 
 <!-- CONTACT -->
@@ -213,44 +221,6 @@ footer{
 <footer>
 <p>© 2026 Bharani</p>
 </footer>
-
-<!-- ✅ SCRIPT FIXED (MOVED OUTSIDE STYLE + AFTER HTML) -->
-<script>
-const roles = ["Data Analyst","Business Analyst","Power BI Developer"];
-
-let i = 0, j = 0;
-let current = "";
-let isDeleting = false;
-
-function typeEffect() {
-  const element = document.getElementById("roles");
-
-  if (!element) return;
-
-  if (!isDeleting && j <= roles[i].length) {
-    current = roles[i].substring(0, j++);
-  } else if (isDeleting && j >= 0) {
-    current = roles[i].substring(0, j--);
-  }
-
-  element.innerHTML = current;
-
-  if (j === roles[i].length) {
-    isDeleting = true;
-    setTimeout(typeEffect, 1200);
-    return;
-  }
-
-  if (j === 0 && isDeleting) {
-    isDeleting = false;
-    i = (i + 1) % roles.length;
-  }
-
-  setTimeout(typeEffect, isDeleting ? 50 : 100);
-}
-
-document.addEventListener("DOMContentLoaded", typeEffect);
-</script>
 
 </body>
 </html>

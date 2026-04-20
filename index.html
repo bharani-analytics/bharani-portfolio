@@ -17,7 +17,51 @@
   --border:#1f1f2e;
 }
 *{box-sizing:border-box}
+<script>
+const roles = [
+  "Data Analyst",
+  "Business Analyst",
+  "Power BI Developer"
+];
 
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
+
+function typeEffect() {
+  const element = document.getElementById("roles");
+
+  if (i < roles.length) {
+
+    if (!isDeleting && j <= roles[i].length) {
+      current = roles[i].substring(0, j++);
+      element.innerHTML = current;
+    }
+
+    if (isDeleting && j >= 0) {
+      current = roles[i].substring(0, j--);
+      element.innerHTML = current;
+    }
+
+    if (j === roles[i].length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1200); // pause at full word
+      return;
+    }
+
+    if (j === 0 && isDeleting) {
+      isDeleting = false;
+      i = (i + 1) % roles.length;
+    }
+  }
+
+  setTimeout(typeEffect, isDeleting ? 50 : 100);
+}
+
+typeEffect();
+</script>
+  
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
@@ -103,6 +147,26 @@ nav a:hover{color:#fff}
   height:8px;
   background:#d4af37;
   border-radius:10px;
+}
+  .typing{
+  font-size:1.6rem;
+  color:#d4af37;
+  height:30px;
+  margin-bottom:10px;
+  letter-spacing:1px;
+}
+
+/* Blinking cursor */
+.cursor{
+  display:inline-block;
+  margin-left:5px;
+  animation:blink 1s infinite;
+  color:#d4af37;
+}
+
+@keyframes blink{
+  0%,50%,100%{opacity:1}
+  25%,75%{opacity:0}
 }
 /* CARD */
 .experience-card{
@@ -238,7 +302,18 @@ section{
   line-height:1.7;
   margin-top:10px;
 }
+.hero-sub{
+  font-size:1.5rem;
+  color:#9aa0a6;
+  margin-bottom:5px;
+}
 
+.hero-name{
+  font-size:3.5rem;
+  font-weight:700;
+  color:#d4af37;
+  margin:0;
+}
 /* BACKGROUND GLOW EFFECT */
 .home::before{
   content:"";
@@ -423,7 +498,6 @@ footer{
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -433,12 +507,12 @@ footer{
 
   <section id="home" class="home">
 
-  <h2 class="hero-name">Hello, I'm </h2>
-  </h1> Bharani</h1>
+  <h2 class="hero-sub">Hello, I'm</h2>
+<h1 class="hero-name">Bharani</h1>
 
   <h3 class="typing">
-    <span id="roles"></span>
-  </h3>
+  <span id="roles"></span><span class="cursor">|</span>
+</h3>
 
   <p class="hero-text">
   Analyzed 500+ employee and operational datasets and developed 5+ Power BI dashboards to drive data-driven business decisions.

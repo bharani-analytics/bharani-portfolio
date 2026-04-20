@@ -104,7 +104,78 @@ nav a:hover{color:#fff}
   background:#d4af37;
   border-radius:10px;
 }
+/* CARD */
+.experience-card{
+  max-width:800px;
+  margin:auto;
+  background:#12121a;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #1f1f2e;
+  text-align:left;
+  position:relative;
+}
 
+/* GOLD LEFT BORDER (HIGHLIGHT) */
+.experience-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+  width:4px;
+  background:#d4af37;
+  border-radius:10px 0 0 10px;
+}
+
+/* TITLE */
+.experience-card h3{
+  color:#d4af37;
+  margin-bottom:5px;
+}
+
+/* COMPANY */
+.company{
+  font-weight:600;
+  color:#ddd;
+  margin:0;
+}
+
+/* DURATION */
+.duration{
+  font-size:14px;
+  color:#9aa0a6;
+  margin-bottom:15px;
+}
+
+/* SUMMARY */
+.summary{
+  color:#bbb;
+  margin-bottom:15px;
+}
+
+/* BULLETS */
+.exp-list{
+  padding-left:0;
+  list-style:none;
+}
+
+.exp-list li{
+  position:relative;
+  padding-left:25px;
+  margin-bottom:10px;
+  color:#ccc;
+  line-height:1.6;
+}
+
+/* CUSTOM BULLET */
+.exp-list li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#d4af37;
+  font-size:14px;
+}
 /* responsive */
 @media(max-width:900px){
   .about-container{
@@ -520,31 +591,30 @@ Performed end-to-end data analysis using Python, SQL, and Power BI,Cleaned and p
 </section>
 
 
-<!-- EXPERIENCE -->
 <section id="experience">
 <h2>Experience</h2>
 
-<div class="project">
-<h3>HR & Operations Analytics Intern</h3>
-<p style="color:#d4af37;">Propel Industries Pvt Ltd,Coimbatore | Aug 2025 – Jan 2026</p>
+<div class="experience-card">
 
-<p>
-Worked on employee and operational datasets to generate insights for business decisions.
-</p>
+  <h3>HR & Operations Analytics Intern</h3>
+  <p class="company">Propel Industries Pvt Ltd, Coimbatore</p>
+  <p class="duration">Aug 2025 – Jan 2026</p>
 
-<ul>
- <li>Developed Power BI dashboards for travel expenses, CUG expenses, transportation utilization, and employee satisfaction</li>
- <li> Analyzed high-value operational and expenditure data to identify cost trends and usage patterns</li>
- <li>Built dashboards to track department-wise insights and key operational metrics</li>
- <li> Processed and analyzed 500+ employee survey responses to derive actionable insights</li>
- <li>Delivered data-driven insights to support HR and operational decision-making</li>
- <li>Supported dashboard reporting, data validation, and documentation for HR and management use</li>
+  <p class="summary">
+    Worked on employee and operational datasets to generate insights for business decisions.
+  </p>
 
-</ul>
+  <ul class="exp-list">
+    <li>Developed Power BI dashboards for travel expenses, CUG expenses, transportation utilization, and employee satisfaction</li>
+    <li>Analyzed high-value operational and expenditure data to identify cost trends and usage patterns</li>
+    <li>Built dashboards to track department-wise insights and key operational metrics</li>
+    <li>Processed and analyzed 500+ employee survey responses to derive actionable insights</li>
+    <li>Delivered data-driven insights to support HR and operational decision-making</li>
+    <li>Supported dashboard reporting, data validation, and documentation for HR and management use</li>
+  </ul>
 
 </div>
 </section>
-
 <!-- CONTACT -->
 <section id="contact" class="contact">
 <h2>Contact</h2>

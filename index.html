@@ -4,85 +4,160 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bharani K | Data Analyst Portfolio</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 :root{
   --bg:#0b0b0f;
-  --card:#12121a;
-  --muted:#9aa0a6;
   --gold:#d4af37;
   --gold-2:#b8962e;
+  --muted:#9aa0a6;
   --border:#1f1f2e;
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:'Poppins',sans-serif;background:radial-gradient(1200px 600px at 80% -10%,rgba(212,175,55,.15),transparent 60%), var(--bg);color:#f5f5f5;scroll-behavior:smooth;}
-header{display:flex;justify-content:space-between;align-items:center;padding:18px 60px;background:rgba(11,11,15,.7);backdrop-filter:blur(8px);position:sticky;top:0;z-index:1000;border-bottom:1px solid #1a1a24;}
-header h2{margin:0;color:var(--gold);letter-spacing:.5px}
-nav a{color:#bfbfbf;margin:0 14px;text-decoration:none;font-weight:500;position:relative}
-nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:.3s}
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,rgba(212,175,55,.15),transparent 60%), var(--bg);
+  color:#f5f5f5;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:18px 60px;
+  background:rgba(11,11,15,.7);
+  border-bottom:1px solid #1a1a24;
+  position:sticky;
+  top:0;
+}
+header h2{color:var(--gold)}
+
+nav a{
+  color:#bbb;
+  margin:0 14px;
+  text-decoration:none;
+}
 nav a:hover{color:#fff}
-nav a:hover::after{width:100%}
+
+/* SECTION */
 section{padding:90px 60px}
 
-/* HERO */
-.home{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;height:92vh}
-.avatar{position:relative}
-.home img{width:170px;height:170px;border-radius:50%;border:3px solid var(--gold);box-shadow:0 0 0 8px rgba(212,175,55,.08), 0 20px 60px rgba(0,0,0,.6)}
-.home h1{font-size:3.2rem;margin:14px 0 6px}
-.home h3{margin:0 0 10px;color:var(--gold);font-weight:500}
-.home p{max-width:680px;color:var(--muted);line-height:1.7}
-.cta{margin-top:18px}
-.btn{display:inline-flex;align-items:center;gap:8px;margin:8px;padding:12px 20px;background:linear-gradient(180deg,var(--gold),var(--gold-2));color:#000;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:0 10px 25px rgba(212,175,55,.25);transition:.25s}
-.btn.outline{background:transparent;color:#fff;border:1px solid var(--border);box-shadow:none}
-.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(212,175,55,.35)}
-.btn.outline:hover{border-color:var(--gold);color:var(--gold)}
+/* HOME */
+.home{
+  height:92vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.home img{
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  border:3px solid var(--gold);
+}
+
+.home h1{font-size:3rem}
+.home h3{color:var(--gold)}
+
+.home p{
+  max-width:650px;
+  color:var(--muted);
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin:10px;
+  padding:12px 20px;
+  background:linear-gradient(var(--gold),var(--gold-2));
+  color:black;
+  border-radius:8px;
+  text-decoration:none;
+  cursor:pointer;
+}
+.btn.outline{
+  background:none;
+  color:white;
+  border:1px solid var(--border);
+}
 
 /* ABOUT */
-.about{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center}
-.about img{width:260px;border-radius:16px;border:2px solid var(--gold);box-shadow:0 20px 60px rgba(0,0,0,.5)}
-.about p{color:var(--muted);line-height:1.8}
+.about{
+  display:grid;
+  grid-template-columns:250px 1fr;
+  gap:40px;
+}
+.about img{
+  width:250px;
+  border-radius:12px;
+}
 
 /* SKILLS */
-.skills{display:flex;flex-wrap:wrap;gap:10px}
-.skills span{background:#161622;padding:10px 14px;border-radius:999px;border:1px solid var(--border);color:#ddd}
+.skills span{
+  display:inline-block;
+  background:#161622;
+  padding:10px;
+  margin:5px;
+  border-radius:20px;
+}
 
 /* PROJECTS */
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
-.project{position:relative;background:linear-gradient(180deg,#12121a,#0f0f16);padding:22px;border-radius:16px;border:1px solid var(--border);overflow:hidden;transition:.3s}
-.project::before{content:"";position:absolute;inset:-1px;background:linear-gradient(120deg,transparent,rgba(212,175,55,.35),transparent);opacity:0;transition:.4s}
-.project:hover::before{opacity:1}
-.project:hover{transform:translateY(-8px);border-color:var(--gold)}
-.project h3{margin-top:6px;color:var(--gold)}
-.project p{color:#cfcfcf;line-height:1.6}
-.tags{margin:10px 0}
-.tag{display:inline-block;font-size:.8rem;padding:6px 10px;margin:4px;border-radius:999px;border:1px solid #2a2a3a;color:#cfcfcf}
-.actions{display:flex;gap:10px;margin-top:10px}
-.actions a{font-size:.9rem}
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+
+.project{
+  background:#12121a;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid var(--border);
+}
+
+.project img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+.tag{
+  display:inline-block;
+  padding:5px 10px;
+  border:1px solid #333;
+  border-radius:20px;
+  margin:5px;
+}
 
 /* CONTACT */
 .contact p{color:var(--muted)}
-.social a{color:#bbb;margin-right:12px;font-size:1.2rem}
+
+.social a{
+  color:#bbb;
+  margin-right:10px;
+  font-size:1.2rem;
+}
+
 .social a:hover{color:var(--gold)}
 
-footer{text-align:center;padding:22px;background:rgba(11,11,15,.7);border-top:1px solid #1a1a24;color:#777}
-
-/* REVEAL ANIMATIONS */
-.reveal{opacity:0;transform:translateY(30px);transition:.6s ease}
-.reveal.active{opacity:1;transform:none}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  header{padding:16px 24px}
-  section{padding:70px 24px}
-  .about{grid-template-columns:1fr}
-  .about img{width:200px}
+footer{
+  text-align:center;
+  padding:20px;
+  border-top:1px solid #1a1a24;
 }
 </style>
 </head>
 
 <body>
+
 <header>
   <h2>Bharani K</h2>
   <nav>
@@ -94,170 +169,125 @@ footer{text-align:center;padding:22px;background:rgba(11,11,15,.7);border-top:1p
   </nav>
 </header>
 
+<!-- HOME -->
 <section id="home" class="home">
-  <div class="avatar"><img src="your-photo.jpg" alt="profile"></div>
+  <img src="your-photo.jpg">
   <h1>Bharani K</h1>
-  <h3><span id="type"></span></h3>
-  <p>I transform raw data into meaningful insights using Power BI, Excel, and SQL to support smart business decisions.</p>
-  <div class="cta">
-    <a href="#projects" class="btn"><i class="fa-solid fa-chart-column"></i> View My Projects</a>
-    <a href="https://linkedin.com" class="btn outline"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-    <a href="resume.pdf" class="btn outline"><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
-  </div>
+  <h3>Data Analyst | Business Analyst</h3>
+
+  <p>
+  Analyzed 500+ employee and operational datasets and developed 5+ Power BI dashboards to drive data-driven business decisions.
+  </p>
+
+  <a href="#projects" class="btn">View Projects</a>
+  <a href="https://www.linkedin.com/in/bharanik25/" class="btn outline">LinkedIn</a>
+  <a href="resume.pdf" class="btn outline">Resume</a>
 </section>
 
-<section id="about" class="about reveal">
-  <img src="your-photo.jpg" alt="about">
+<!-- ABOUT -->
+<section id="about" class="about">
+  <img src="your-photo.jpg">
   <div>
     <h2>About Me</h2>
-    <p>MBA student specializing in analytics with hands-on experience in HR analytics and business data analysis. I build dashboards, analyze datasets, and communicate insights that drive decisions.</p>
+    <p>
+    MBA student specializing in analytics with hands-on experience in HR analytics and business data analysis.
+    </p>
   </div>
 </section>
 
-<section id="skills" class="reveal">
+<!-- SKILLS -->
+<section id="skills">
   <h2>Skills</h2>
-  <div class="skills">
-    <span>Power BI</span>
-    <span>Excel</span>
-    <span>SQL</span>
-    <span>Data Visualization</span>
-    <span>Statistics</span>
-  </div>
+  <span>Power BI</span>
+  <span>Excel</span>
+  <span>SQL</span>
+  <span>Data Visualization</span>
+  <span>Statistics</span>
 </section>
 
-<section id="projects" class="reveal">
-  <h2>Projects</h2>
-  <div class="projects">
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
 
-    <div class="project">
-      <h3>HR Analytics Dashboard Suite</h3>
-      <div class="tags">
-        <span class="tag">Power BI</span>
-        <span class="tag">Excel</span>
-      </div>
-      <p>
-        Designed and developed multiple HR dashboards to analyze employee engagement, transportation utilization, and operational expenses.
-      </p>
-      <ul style="color:#cfcfcf; line-height:1.6; padding-left:18px;">
-        <li>Built dashboards for transportation, CUG, travel, and provision expense tracking</li>
-        <li>Analyzed employee satisfaction and engagement metrics</li>
-        <li>Delivered insights to support HR decision-making and operational planning</li>
-      </ul>
-      <div class="actions">
-        <a href="#" class="btn outline">View Dashboard</a>
-      </div>
-    </div>
+<div class="projects">
 
-    <div class="project">
-      <h3>Customer Shopping Behavior Analysis</h3>
-      <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Power BI</span>
-      </div>
-      <p>
-        Performed end-to-end data analysis to understand customer behavior, revenue trends, and product performance.
-      </p>
-      <ul style="color:#cfcfcf; line-height:1.6; padding-left:18px;">
-        <li>Cleaned and transformed raw datasets using Python (Pandas)</li>
-        <li>Extracted insights using SQL queries for business analysis</li>
-        <li>Built interactive Power BI dashboard to visualize customer trends</li>
-        <li>Identified key patterns influencing purchasing behavior</li>
-      </ul>
-      <div class="actions">
-        <a href="https://github.com/bharani-analytics/Customer_behavior_analysis" class="btn outline">GitHub</a>
-      </div>
-    </div>
+<div class="project">
+<h3>HR Analytics Dashboard Suite</h3>
 
-    <div class="project">
-      <h3>Student Spending Habit Analysis</h3>
-      <div class="tags">
-        <span class="tag">Excel</span>
-        <span class="tag">Statistics</span>
-      </div>
-      <p>
-        Conducted statistical analysis on student spending patterns to identify trends and relationships between variables.
-      </p>
-      <ul style="color:#cfcfcf; line-height:1.6; padding-left:18px;">
-        <li>Applied correlation, ANOVA, and regression analysis techniques</li>
-        <li>Analyzed online payment behavior and spending categories</li>
-        <li>Generated insights to understand financial habits of students</li>
-      </ul>
-      <div class="actions">
-        <a href="#" class="btn outline">View Report</a>
-      </div>
-    </div>
+<img src="transport-dashboard.png">
+<img src="hse-dashboard.png">
+<img src="seating-dashboard.png">
+<img src="satisfaction-dashboard.png">
 
-  </div>
+<div>
+<span class="tag">Power BI</span>
+<span class="tag">Excel</span>
+</div>
+
+<p>
+Developed 5+ Power BI dashboards analyzing 500+ employee and operational records including transportation, safety, seating, and satisfaction insights.
+</p>
+
+<a href="#" class="btn outline">View Dashboard</a>
+
+</div>
+
+<div class="project">
+<h3>Customer Shopping Behavior Analysis</h3>
+
+<div>
+<span class="tag">Python</span>
+<span class="tag">SQL</span>
+</div>
+
+<p>
+Analyzed customer behavior using Python, SQL, and Power BI to identify revenue trends and purchasing patterns.
+</p>
+
+<a href="https://github.com/bharani-analytics/Customer_behavior_analysis" class="btn outline">GitHub</a>
+
+</div>
+
+</div>
 </section>
 
-<section id="experience" class="reveal">
-  <h2>Internship Experience</h2>
-  <div class="projects">
+<!-- EXPERIENCE -->
+<section id="experience">
+<h2>Internship Experience</h2>
 
-    <div class="project">
-      <h3>HR & Operations Analytics Intern</h3>
-      <div class="tags">
-        <span class="tag">Power BI</span>
-        <span class="tag">Excel</span>
-        <span class="tag">Data Analysis</span>
-      </div>
-      <p>
-        Worked on employee and operational datasets to generate insights for business decision-making. Built interactive dashboards and reports for HR analytics and operational tracking.
-      </p>
-      <ul style="color:#cfcfcf; line-height:1.6; padding-left:18px;">
-        <li>Developed dashboards for transportation utilization and cost tracking</li>
-        <li>Analyzed employee data to identify trends in engagement and satisfaction</li>
-        <li>Created reports to support HR decision-making processes</li>
-      </ul>
-    </div>
+<div class="project">
+<h3>HR & Operations Analytics Intern</h3>
+<p style="color:#d4af37;">Propel Industries Pvt Ltd | Aug 2025 – Jan 2026</p>
 
-  </div>
+<p>
+Worked on employee and operational datasets to generate insights for business decisions.
+</p>
+
+<ul>
+<li>Developed dashboards for transportation and cost tracking</li>
+<li>Analyzed employee engagement and satisfaction</li>
+<li>Created reports for HR decision-making</li>
+</ul>
+
+</div>
 </section>
 
-<section id="contact" class="contact reveal">
-  <h2>Contact</h2>
-  <p>Email: your-email@gmail.com</p>
-  <p>Phone: +91-XXXXXXXXXX</p>
-  <div class="social">
-    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="#"><i class="fa-brands fa-github"></i></a>
-  </div>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<h2>Contact</h2>
+
+<p>Email: bharanikaruppusamy25@gmail.com</p>
+
+<div class="social">
+<a href="https://www.linkedin.com/in/bharanik25/"><i class="fa-brands fa-linkedin"></i></a>
+<a href="https://github.com/bharani-analytics"><i class="fa-brands fa-github"></i></a>
+</div>
+
 </section>
 
 <footer>
-  <p>© 2026 Bharani K</p>
+<p>© 2026 Bharani K</p>
 </footer>
-
-<script>
-// Typing effect
-const roles=["Data Analyst","Business Analyst","Power BI Developer"];
-let i=0,j=0,cur="",isDel=false;
-function type(){
-  const el=document.getElementById('type');
-  if(!el) return;
-  if(i<roles.length){
-    if(!isDel && j<=roles[i].length){
-      cur=roles[i].substring(0,j++);
-      el.textContent=cur;
-    }
-    if(isDel && j>=0){
-      cur=roles[i].substring(0,j--);
-      el.textContent=cur;
-    }
-    if(j===roles[i].length){isDel=true;setTimeout(type,900);return}
-    if(j===0 && isDel){isDel=false;i=(i+1)%roles.length}
-  }
-  setTimeout(type,isDel?50:100);
-}
-type();
-
-// Scroll reveal
-const obs=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('active')}})
-},{threshold:.15});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-</script>
 
 </body>
 </html>

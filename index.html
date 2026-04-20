@@ -73,7 +73,47 @@ section{
   max-width:650px;
   color:var(--muted);
 }
+/* HERO NAME GLOW */
+.hero-name{
+  font-size:3.2rem;
+  font-weight:700;
+  background:linear-gradient(90deg,#d4af37,#f5d76e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 20px rgba(212,175,55,0.2);
+  margin-bottom:10px;
+}
 
+/* TYPING */
+.typing{
+  font-size:1.6rem;
+  color:#d4af37;
+  height:30px;
+  margin-bottom:15px;
+  letter-spacing:1px;
+}
+
+/* HERO TEXT */
+.hero-text{
+  max-width:600px;
+  color:#9aa0a6;
+  line-height:1.7;
+  margin-top:10px;
+}
+
+/* BACKGROUND GLOW EFFECT */
+.home::before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle, rgba(212,175,55,0.15), transparent 70%);
+  top:20%;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:-1;
+  filter:blur(60px);
+}
 /* BUTTONS */
 .cta{
   display:flex;
@@ -249,17 +289,16 @@ footer{
 </header>
 
 <!-- HOME -->
-<section id="home" class="home">
-  
 
-  <h2>Hello, I'm </h2>
-  <h1>Bharani K</h1>
+  <section id="home" class="home">
+
+  <h1 class="hero-name">Hello, I'm Bharani</h1>
 
   <h3 class="typing">
     <span id="roles"></span>
   </h3>
 
-  <p>
+  <p class="hero-text">
   Analyzed 500+ employee and operational datasets and developed 5+ Power BI dashboards to drive data-driven business decisions.
   </p>
 
@@ -268,6 +307,7 @@ footer{
     <a href="https://www.linkedin.com/in/bharanik25/" class="btn outline">LinkedIn</a>
     <a href="Bharani_Resume_.pdf" class="btn outline">Resume</a>
   </div>
+
 </section>
 
 <!-- ABOUT -->

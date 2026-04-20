@@ -45,7 +45,10 @@ nav a{
 nav a:hover{color:#fff}
 
 /* SECTION */
-section{padding:90px 60px}
+section{
+  padding:90px 60px;
+  text-align:center;
+}
 
 /* HOME */
 .home{
@@ -54,7 +57,6 @@ section{padding:90px 60px}
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  text-align:center;
 }
 
 .home img{
@@ -72,17 +74,33 @@ section{padding:90px 60px}
   color:var(--muted);
 }
 
-/* BUTTON */
+/* BUTTONS */
+.cta{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
 .btn{
-  display:inline-block;
-  margin:10px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   padding:12px 20px;
   background:linear-gradient(var(--gold),var(--gold-2));
   color:black;
   border-radius:8px;
   text-decoration:none;
+  font-weight:600;
+  transition:0.2s;
   cursor:pointer;
 }
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
 .btn.outline{
   background:none;
   color:white;
@@ -91,12 +109,13 @@ section{padding:90px 60px}
 
 /* ABOUT */
 .about{
-  display:grid;
-  grid-template-columns:250px 1fr;
-  gap:40px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
 }
 .about img{
-  width:250px;
+  width:200px;
   border-radius:12px;
 }
 
@@ -121,6 +140,7 @@ section{padding:90px 60px}
   padding:20px;
   border-radius:12px;
   border:1px solid var(--border);
+  text-align:center;
 }
 
 .project img{
@@ -179,20 +199,20 @@ footer{
   Analyzed 500+ employee and operational datasets and developed 5+ Power BI dashboards to drive data-driven business decisions.
   </p>
 
-  <a href="#projects" class="btn">View Projects</a>
-  <a href="https://www.linkedin.com/in/bharanik25/" class="btn outline">LinkedIn</a>
-  <a href="resume.pdf" class="btn outline">Resume</a>
+  <div class="cta">
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="https://www.linkedin.com/in/bharanik25/" class="btn outline">LinkedIn</a>
+    <a href="resume.pdf" class="btn outline">Resume</a>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="about">
   <img src="your-photo.jpg">
-  <div>
-    <h2>About Me</h2>
-    <p>
-    MBA student specializing in analytics with hands-on experience in HR analytics and business data analysis.
-    </p>
-  </div>
+  <h2>About Me</h2>
+  <p>
+  MBA student specializing in analytics with hands-on experience in HR analytics and business data analysis.
+  </p>
 </section>
 
 <!-- SKILLS -->

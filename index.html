@@ -106,6 +106,66 @@ section{
   color:white;
   border:1px solid var(--border);
 }
+  .about-container{
+  display:grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap:40px;
+  margin-top:40px;
+  text-align:left;
+}
+
+.profile-card{
+  background:#12121a;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid #1f1f2e;
+}
+
+.profile-card p{
+  margin:8px 0;
+  color:#ccc;
+}
+
+.profile-card h3{
+  margin-top:20px;
+  color:#d4af37;
+}
+
+/* Skill bars */
+.skill-bar{
+  margin:10px 0;
+}
+
+.skill-bar span{
+  font-size:14px;
+}
+
+.bar{
+  width:100%;
+  height:6px;
+  background:#222;
+  border-radius:10px;
+  margin-top:5px;
+}
+
+.bar div{
+  height:6px;
+  background:#d4af37;
+  border-radius:10px;
+}
+
+/* Right side */
+.about-content p{
+  color:#aaa;
+  line-height:1.6;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .about-container{
+    grid-template-columns:1fr;
+  }
+}
 
 /* ABOUT */
 .about{
@@ -212,16 +272,73 @@ footer{
 
 <!-- ABOUT -->
 <section id="about" class="about">
-  <img src="PHOTO.jpeg">
-  <h2>About Me</h2>
-  <p>
- 
-MBA graduate specializing in analytics with hands-on experience in analyzing HR and operational data. Developed 5+ interactive Power BI dashboards during internship, delivering insights across workplace safety, expense management, telecom usage, and employee experience.
 
-My core expertise includes Power BI, Advanced Excel, SQL, and basic Python. I specialize in dashboard design, KPI tracking, data cleaning, and MIS automation.
-  </p>
+<h2>About Me</h2>
+
+<div class="about-container">
+
+  <!-- LEFT PROFILE CARD -->
+  <div class="profile-card">
+    <p><strong>Name:</strong> Bharani K</p>
+    <p><strong>Role:</strong> Data Analyst | Business Analyst</p>
+    <p><strong>Experience:</strong> 6 Months – HR & Analytics Internship</p>
+    <p><strong>Location:</strong> Tamil Nadu, India</p>
+
+    <h3>Core Skills</h3>
+
+    <div class="skill-bar">
+      <span>Power BI</span>
+      <div class="bar"><div style="width:90%"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <span>Excel (Advanced)</span>
+      <div class="bar"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <span>Data Visualization</span>
+      <div class="bar"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <span>Python (Basics)</span>
+      <div class="bar"><div style="width:65%"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <span>Business Analytics</span>
+      <div class="bar"><div style="width:85%"></div></div>
+    </div>
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="about-content">
+
+    <h3>About</h3>
+    <p>
+    MBA graduate specializing in Business Analytics with hands-on experience in HR and operational analytics. During my internship, I developed 5+ Power BI dashboards and analyzed 500+ datasets across performance management, hiring analytics, manpower planning, and financial monitoring.
+    </p>
+
+    <p>
+    Skilled in Power BI, Advanced Excel, SQL, and Python, I specialize in dashboard design, KPI tracking, data cleaning, and MIS automation.
+    </p>
+
+    <p><strong>Profile:</strong> Business Analyst | Data Analyst</p>
+    <p><strong>Domain:</strong> HR Analytics, Retail, Ecommerce</p>
+    <p><strong>Education:</strong> MBA – Business Analytics</p>
+    <p><strong>Languages:</strong> English, Tamil</p>
+    <p><strong>BI Tools:</strong> Microsoft Power BI</p>
+    <p><strong>Other Skills:</strong> Excel VBA, SQL, SPSS, PowerPoint</p>
+    <p><strong>Interest:</strong> Data-Driven Strategy & Business Optimization</p>
+
+    <h2 style="color:#d4af37;">8+ Projects Completed</h2>
+
+  </div>
+
+</div>
+
 </section>
-
 <!-- SKILLS -->
 <section id="skills">
   <h2>Skills</h2>
